@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Rock paper scissor game</title>
+<meta charset="utf-8">
+</head>
+
+
+<body>
+<script>
+
+
+ function getComputerchoice() {
+    const Random = ['rock', 'paper', 'scissor']
+    let Choices = Math.floor(Math.random() * 3);
+    console.log(Choices)
+    return Random[Choices]
+ }
+
+function playRound(playerSelection,computerSelection){
+    playerSelection = playerSelection.toUpperCase();
+    console.log(playerSelection)
+    console.log(computerSelection)
+
+    switch (playerSelection) {
+        case ((playerSelection == 'ROCK') && (getComputerchoice == 'paper')):
+            console.log("You Lose! Paper beats Rock! ")
+            break;
+        case (playerSelection == 'PAPER' && getComputerchoice == 'rock'):
+             console.log("You Win! Paper beats Rock! ")
+             break;
+        case (playerSelection == 'SCISSOR' && getComputerchoice == 'rock'):
+            console.log("You Lose! Rock beats Scissor! ")
+            break;
+        case (playerSelection == 'ROCK' && getComputerchoice == 'scissor'):
+            console.log("You Win! Rock beats ! ")
+            break;
+        case (playerSelection == 'SCISSOR' && getComputerchoice == 'paper'):
+            console.log("You Win! Scissor beats paper! ")
+            break;
+        case (playerSelection == 'PAPER' && getComputerchoice == 'scissor'):
+            console.log("You Lose! Scissor beats paper! ")
+            break;
+        default:
+            console.log("Draw")
+    }
+}
+
+ const playerSelection = 'rock'
+ const computerSelection = getComputerchoice()
+
+ playRound(playerSelection,computerSelection)
+
+</script>
+
+</body>
+
+</html>
